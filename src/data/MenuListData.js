@@ -45,6 +45,10 @@ const MenuListIcon = [
     name: 'vege',
     image: Vegetarian
   },
+  {
+    name: 'Lukas',
+    image: Pig
+  },
 ]
 
 export default MenuListIcon;
