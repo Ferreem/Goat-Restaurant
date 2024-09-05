@@ -4,28 +4,24 @@ import Card from 'react-bootstrap/Card';
 
 export default function CardMeal({ name, img, about, price }) {
   return (
-    <Card style={{ width: '24rem', height: '28rem' }} className=' my-4 mx-1'>
-      <div style={{ height: '18rem' }}>
-        <Card.Img 
-          variant="top" 
-          src={img} 
-          style={{ 
-            height: '18rem', 
-            width: '100%', 
-            objectFit: 'cover' 
-          }} 
+    <Card className="w-full sm:w-80 md:w-72 lg:w-96 h-auto sm:h-[28rem] my-4">
+      <div className="h-52 sm:min-h-72">
+        <img
+          src={img}
+          alt={name}
+          className="w-full h-full object-cover"
         />
       </div>
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <div className='h-10 overflow-y-hidden'>
-          <Card.Text className=''>{about}</Card.Text>
+      <div className="p-4">
+        <h2 className="text-xl font-bold mb-2">{name}</h2>
+        <div className="h-16 overflow-y-hidden mb-4">
+          <p>{about}</p>
         </div>
-        <div className='d-flex justify-content-between align-items-center mt-4'>
-          <div>{price}$</div>
-          <Button variant="success">Add to cart</Button>
-        </div>
-      </Card.Body>
+      </div>
+      <div className="flex justify-between items-center bg-slate-100 p-4">
+        <span className="text-lg font-semibold">${price}</span>
+        <Button variant="success">Add to cart</Button>
+      </div>
     </Card>
   );
 }

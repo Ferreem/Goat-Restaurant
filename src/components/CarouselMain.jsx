@@ -6,7 +6,7 @@ import CarouselImg3 from '../assets/carousel3.jpeg'
 
 function UncontrolledExample() {
   return (
-    <div className='flex justify-center mt-2'>
+    <div className='flex justify-center mt-2 w-full'>
       <Carousel className='w-full'>
         <Carousel.Item>
           <ExampleCarouselImage text="First slide" img={CarouselImg3} />
