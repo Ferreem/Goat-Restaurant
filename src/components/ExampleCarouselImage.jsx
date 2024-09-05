@@ -12,7 +12,6 @@ function ExampleCarouselImage({ text, img }) {
         backgroundPosition: 'center',
       }}
     >
-      {/* Pseudo-element for background image */}
       <div
         style={{
           position: 'absolute',
@@ -23,12 +22,12 @@ function ExampleCarouselImage({ text, img }) {
           backgroundImage: `url(${img})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(60%)', // Apply the brightness filter here
+          filter: 'brightness(45%)', 
           zIndex: 0,
         }}
       />
 
-      <h3 style={{ position: 'relative', zIndex: 1 }}>{text}</h3>
+      <h3 className="font-bold text-3xl" style={{ position: 'relative', zIndex: 1 }}>{text}</h3>
     </div>
   );
 }

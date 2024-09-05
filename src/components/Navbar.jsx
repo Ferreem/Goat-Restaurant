@@ -5,7 +5,7 @@ import Basket from './Basket'
 
 export default function Navbar() {
   return (
-    <div className='h-12 border-b-2 mb-2 flex justify-between'>
+    <div className='h-16 border-b-2 mb-2 flex justify-between items-center'>
       <div>
         <div className='flex'>
           <a href="" className='p-2'>

@@ -3,35 +3,37 @@ import ExampleCarouselImage from './ExampleCarouselImage';
 import CarouselImg1 from '../assets/carousel1.jpg'
 import CarouselImg2 from '../assets/carousel2.jpg'
 import CarouselImg3 from '../assets/carousel3.jpeg'
+import Logo from '../assets/Logo.png'
 
 function UncontrolledExample() {
   return (
-    <div className='flex justify-center mt-2 w-full'>
+    <div className='flex justify-center mt-2 w-full relative'>
       <Carousel className='w-full'>
         <Carousel.Item>
           <ExampleCarouselImage text="First slide" img={CarouselImg3} />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p>Goat Restaurant</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <ExampleCarouselImage text="Second slide" img={CarouselImg1} />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p >Not every animal is the goat</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <ExampleCarouselImage text="Third slide" img={CarouselImg2} />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              We cook, We sleep
             </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2  z-10">
+        <img src={Logo} alt="Logo" className="w-24 h-24 object-contain" style={{filter: 'invert(100%)'}} />
+      </div>
+
     </div>
   );
 }
