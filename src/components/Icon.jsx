@@ -7,7 +7,13 @@ export default function Icon({name, image}) {
       <div>
         <img src={image} alt={name} className='h-10'/>
       </div>
-      <div>{name}</div>
+
+      <div>
+        <div>
+          <h3>{name}</h3>
+          <p>tags</p>
+        </div>
+      </div>
     </div>
   )
 }
