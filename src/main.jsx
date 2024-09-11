@@ -7,12 +7,17 @@ import {
 import Home from './routes/Home/Home.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './index.scss';
+import Fries from './routes/Home/Fries.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/fries",
+    element: <Fries />
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

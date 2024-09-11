@@ -2,9 +2,9 @@ import React from 'react';
 import MenuList from '../../components/MenuList';
 import Navbar from '../../components/Navbar';
 import CarouselMain from '../../components/CarouselMain';
-import RecomendList from '../../components/RecomendList';
 import Footer from '../../components/Footer';
-import RecomendedList from '../../data/RecomendedList';
+import RecomendList from '../../components/RecomendList';
+import FriesList from '../../data/Fries'
 
 export default function Home() {
   return (
@@ -15,9 +15,7 @@ export default function Home() {
       </header> 
       <main className='flex justify-center w-full'>
         <div className='w-full lg:w-8/12 flex flex-col items-center'>
-          <CarouselMain />
-          <p className='mt-8 text-2xl'>We Recommend</p>
-          <RecomendList foodList={RecomendedList}/>
+          <RecomendList foodList={FriesList}/>           {/*  */}
         </div>
       </main>
       <footer>
