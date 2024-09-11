@@ -26,7 +26,7 @@ export default function MenuList() {
     <div className="h-20 flex justify-center items-center border-b-2 relative">
       {/* Left Arrow Button */}
       <button
-        className="h-8 absolute left-3 z-10 p-2 rounded-full hover:bg-gray-400"
+        className="h-8 absolute left-3 z-10 p-2 rounded-full color-primary"
         style={{backgroundColor: '#157347', }}
         onClick={scrollLeft}
       >
@@ -47,9 +47,9 @@ export default function MenuList() {
 
       {/* Right Arrow Button */}
       <button
-        className="h-8 absolute right-3 z-10 p-2 rounded-full hover:bg-gray-400"
+        className="h-8 absolute right-3 z-10 p-2 rounded-full"
+        style={{backgroundColor: '#157347', }}
         onClick={scrollRight}
-        style={{backgroundColor: '#157347'}}
       >
         <img src={rightArrow} alt="" className='h-3' style={{filter: 'invert(100%)'}}/>
       </button>

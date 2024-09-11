@@ -1,9 +1,7 @@
-import Pig from '../assets/pig.png'
 import Goat from '../assets/goat.png'
 import Chicken from '../assets/chicken.png'
-import Vegetarian from '../assets/vegetarian.png'
-import Cow from '../assets/cow.png'
 import Fries from '../assets/french-fries.png'
+import Tortilla from '../assets/Tortilla.png'
 
 const MenuListData = [
   {
@@ -11,142 +9,131 @@ const MenuListData = [
     image: Fries,
     route: '/fries',
   },
- /* {
-    name: 'pork',
-    image: Pig,
-  },
-  {
-    name: 'beef',
-    image: Cow
-  },
-  {
-    name: 'lamb',
-    image: Goat
-  },
   {
     name: 'chicken',
-    image: Chicken
+    image: Chicken,
+    route: '/chicken',
   },
   {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'vege',
-    image: Vegetarian
-  },
-  {
-    name: 'Lukas',
-    image: Pig
+    name: 'tortilla',
+    image: Tortilla,
+    route: "/tortilla",
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
+    image: Goat,
+    route: "/"
   },
   {
     name: 'lamb',
-    image: Goat
-  },*/
+    image: Goat,
+    route: "/"
+  },
 ]
 
 export default MenuListData;

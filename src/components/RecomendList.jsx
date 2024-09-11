@@ -1,6 +1,5 @@
 import React from 'react'
 import CardMeal from './CardMeal'
-import RecomendedList from '../data/RecomendedList'
 
 export default function RecomendList({foodList}) {
   return (

@@ -47,7 +47,7 @@ export default function CardMeal({ name, img, about, price }) {
         </div>
         <div className="flex justify-between items-center bg-slate-50 p-4 mt-auto">
           <span className="text-lg font-semibold">${price}</span>
-          <Button variant="success">Add to cart</Button>
+          <Button variant="success">Add to order</Button>
         </div>
       </Card>
 
