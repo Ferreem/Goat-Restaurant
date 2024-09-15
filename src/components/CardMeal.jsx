@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useState } from 'react';
-import CardModal from './Cardmodal/CardModal'
+import CardModal from './Cardmodal/CardModal';
+import { addToCart } from '../states/cartSlice';
 
-export default function CardMeal({ name, img, about, price }) {
+export default function CardMeal({ id, name, img, about, price }) {
   const [hover, setHover] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     setShowModal(true);
@@ -14,6 +16,10 @@ export default function CardMeal({ name, img, about, price }) {
 
   const handleClose = () => {
     setShowModal(false);
+  }
+
+  const handleAddToOrder = () => {
+    dispatch(addToCart({ id, name, price, img }));
   }
 
   return (
@@ -47,7 +53,7 @@ export default function CardMeal({ name, img, about, price }) {
         </div>
         <div className="flex justify-between items-center bg-slate-50 p-4 mt-auto">
           <span className="text-lg font-semibold">${price}</span>
-          <Button variant="success">Add to order</Button>
+          <Button variant="success" onClick={handleAddToOrder}>Add to order</Button>
         </div>
       </Card>
 

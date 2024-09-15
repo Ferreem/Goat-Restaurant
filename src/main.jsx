@@ -10,7 +10,13 @@ import './index.scss';
 import Fries from './routes/Fries.jsx'
 import Chicken from './routes/Chicken.jsx'
 import Tortilla from './routes/Tortilla.jsx'
-import Order from './routes/Order.jsx'; 
+import Order from './routes/Order.jsx';
+import { Provider } from "react-redux";
+import { store } from './states/store.js';
+import { configureStore } from '@reduxjs/toolkit';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 )

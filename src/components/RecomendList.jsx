@@ -8,6 +8,7 @@ export default function RecomendList({foodList}) {
         {foodList.map((item, index) => (
           <CardMeal
             key={index}
+            id={item.id}
             img={item.img}
             name={item.name}
             about={item.about}
