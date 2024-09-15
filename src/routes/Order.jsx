@@ -31,7 +31,7 @@ export default function Order() {
           <div className='w-full lg:w-8/12 grid grid-cols-1 md:grid-cols-2 gap-4'>
             {/* Orders Section */}
             <div className='bg-white p-4 md:col-span-1'>
-              <h1 className='text-xl font-bold mb-4'>Your Order</h1>
+              
               {items.map((item) => (
                 <CardOrder 
                   key={item.id}
@@ -44,9 +44,9 @@ export default function Order() {
               <h2 className='text-lg font-semibold mt-4'>Total: ${totalPrice}</h2>
             </div>
             {/* Chat Section */}
-            <div className='bg-slate-900 text-white p-4 md:col-span-1'>
-              {/* Chat content goes here */}
-              <h2 className='text-lg font-bold'>Chat</h2>
+            <div className='bg-slate-900 text-white p-4 md:col-span-1 flex flex-col items-center mt-6'>
+            
+              <h2 className='text-2xl font-bold'>YOUR ORDER</h2>
               {/* Add chat components or content here */}
             </div>
           </div>
