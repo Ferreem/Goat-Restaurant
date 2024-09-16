@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className='h-16 border-b-2 mb-2 flex justify-between items-center'>
       <div>
         <div className='flex'>
-          <Link to={'/'} className='p-2'>
+          <Link to={'/'} className='p-2 mr-3'>
             <img src={Home} alt=""  className='h-8'/>
           </Link>
         <Link to={'/'} className='flex flex-col items-center justify-center'>

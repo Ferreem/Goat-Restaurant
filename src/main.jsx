@@ -13,7 +13,7 @@ import Tortilla from './routes/Tortilla.jsx'
 import Order from './routes/Order.jsx';
 import { Provider } from "react-redux";
 import { store } from './states/store.js';
-import { configureStore } from '@reduxjs/toolkit';
+import OrderFinish from './routes/OrderFinish.jsx';
 
 
 
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/order",
     element: <Order />
+  },
+  {
+    path: "/order/finish",
+    element: <OrderFinish />
   },
 
 ]);

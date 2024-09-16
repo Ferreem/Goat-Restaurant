@@ -11,7 +11,7 @@ export default function Basket() {
       style={{borderColor:'#157347', borderWidth: '1px'}}
       >
         <img src={ShoppingBasket} alt="" className='h-5' style={{ filter: 'invert(20%) sepia(70%) saturate(600%) hue-rotate(90deg)' }}/>
-        <p className='text-sm ml-1' style={{color:'#157347'}}>{totalPrice} $</p>
+        <p className='text-sm ml-1' style={{color:'#157347'}}>$ {totalPrice.toFixed(2)}</p>
       </a>
     </>
   )

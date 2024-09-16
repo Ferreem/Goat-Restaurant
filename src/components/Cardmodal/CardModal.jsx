@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Modal, Row, Col } from 'react-bootstrap';
+import { Modal, Row, Col } from 'react-bootstrap';
+import AddToCartButton from '../AddToCartButton'; // Import the new button component
 
-function CardModal({ show, handleClose, name, img, about, price }) {
+function CardModal({ show, handleClose, id, name, img, about, price }) {
   return (
     <Modal
       show={show}
@@ -20,12 +21,12 @@ function CardModal({ show, handleClose, name, img, about, price }) {
           </Col>
           <Col xs={12} md={6} className="p-0 d-flex flex-column">
             <Modal.Header closeButton className="border-0">
-              <Modal.Title>{name}</Modal.Title>
+              <Modal.Title className='font-bold'>{name}</Modal.Title>
             </Modal.Header>
             <p className="p-3 flex-grow-1">{about}</p>
             <div className="d-flex justify-content-between align-items-center p-3">
-              <p className="mb-0 font-weight-bold">Price: ${price}</p>
-              <Button variant="success">Add to cart</Button>
+              <p className="mb-0 font-weight-bold font-semibold my-4">Price: ${price}</p>
+              <AddToCartButton id={id} name={name} price={price} img={img} />
             </div>
           </Col>
         </Row>

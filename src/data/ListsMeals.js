@@ -1,5 +1,5 @@
 import chickenwing from '../data/foodImages/chickenwing.jpg';
-import chickenTortilla from '../data/foodImages/chickenTortilla.jpeg';
+import chickenTortilla from '../data/foodImages/chickenTortilla.jpg';
 import cheezyChickenTortilla from '../data/foodImages/cheezyChickenTortilla.webp';
 import chickenstrips from '../data/foodImages/chickenstrips.jpg';
 import beefTortilla from '../data/foodImages/beefTortilla.jpg';

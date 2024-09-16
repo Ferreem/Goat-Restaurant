@@ -8,8 +8,8 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      const { id, name, img, about, price } = action.payload;  // Destructure all fields
-      state.items.push({ id, name, img, about, price });  // Include all necessary properties
+      const { id, name, img, price } = action.payload;  // Destructure all fields
+      state.items.push({ id, name, img, price });  // Include all necessary properties
       state.totalPrice += price;
     },
     removeFromCart: (state, action) => {

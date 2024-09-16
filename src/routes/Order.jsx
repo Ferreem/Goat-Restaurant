@@ -1,23 +1,13 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, clearCart } from '../states/cartSlice';
+import { useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 import MenuList from '../components/MenuList';
 import CardOrder from '../components/CardOrder';
-import Chat from '../components/Chat'; // Assuming Chat is a component you want to include
+import Chat from '../components/Chat';
+import { Link } from 'react-router-dom';
 
 export default function Order() {
   const { items, totalPrice } = useSelector(state => state.cart);
-  const dispatch = useDispatch();
-
-  const handleRemoveItem = (id) => {
-    dispatch(removeFromCart({ id }));
-  };
-
-  const handleClearCart = () => {
-    dispatch(clearCart());
-  };
-  console.log(items);
 
   return (
     <>
@@ -35,19 +25,40 @@ export default function Order() {
               {items.map((item) => (
                 <CardOrder 
                   key={item.id}
+                  id={item.id}
                   img={item.img} 
                   name={item.name} 
                   price={item.price} 
                   about={item.about}
+                  
                 />
               ))}
-              <h2 className='text-lg font-semibold mt-4'>Total: ${totalPrice}</h2>
+              <div className='flex mt-4'>
+                <div className='w-52 mr-4 text-lg font-semibold bg p-4 lg:w-80  bg-slate-800 flex justify-center items-center h-24 text-white'>
+                  <h2 className='text-lg font-semibold '>Total: ${totalPrice.toFixed(2)}</h2>
+                </div>
+                <Link to={'/order/finish'} className='w-32 text-lg font-semibold  bg-color-primary  p-4 lg:w-64 text-white flex justify-center items-center'>Continue</Link>
+              </div>
             </div>
             {/* Chat Section */}
-            <div className='bg-slate-900 text-white p-4 md:col-span-1 flex flex-col items-center mt-6'>
+            <div className=' bg-slate-800 text-white p-4 md:col-span-1 flex flex-col items-center mt-6 h'
+            style={{height: '60vh'}}
+            >
+
             
               <h2 className='text-2xl font-bold'>YOUR ORDER</h2>
-              {/* Add chat components or content here */}
+              {items.map((item) => (
+                <>
+                <li className='flex justify-between w-full mt-2'>
+                    <h2>{item.name}</h2>
+                    <p>$ {item.price}</p>
+                  
+                </li>
+                <hr className="border-t border-white w-full " />
+                </>
+              ))}
+            </div>
+            <div>
             </div>
           </div>
         </main>
